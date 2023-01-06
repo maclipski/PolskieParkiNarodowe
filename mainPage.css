@@ -1,3 +1,8 @@
+.navbar {
+	z-index: 1;
+	position: absolute;
+}
+
 ul {
   position: fixed;
   top: 0;
@@ -33,7 +38,7 @@ li a:hover {
 .btn-group .button {
 	width: 33%;
 	aspect-ratio: 1/1;
-	background-color: #4CAF50;  /*Green */
+	background-color: white;
 	border: none;
 	color: white;
 	padding: 32px 32px;
@@ -43,25 +48,111 @@ li a:hover {
     font-size: 16px;
     cursor: pointer;
     float: left;
+	opacity: 0.6;
+	background-size:cover;
+	background-origin: content-box;
+	background-repeat: no-repeat;
+	padding: 50px;
 }
 
 .btn-group .button:hover {
-	background-color: #3e8e41;
+	opacity: 1;
+	transition: 0.3s;
 }
 
 .btn-group:nth-of-type(1) .button:nth-of-type(1) {
 	background-image: url(https://www.symbole.pl/wp-content/uploads/2020/06/Babiog%C3%B3rski-Park-Narodowy.jpg);
-	background-size:cover;
 }
 
 .btn-group:nth-of-type(1) .button:nth-of-type(2) {
 	background-image: url(https://www.symbole.pl/wp-content/uploads/2020/06/Bia%C5%82owieski-Park-Narodowy.jpg);
-	background-size:cover;
 }
 
 .btn-group:nth-of-type(1) .button:nth-of-type(3) {
 	background-image: url(https://www.symbole.pl/wp-content/uploads/2020/06/Biebrza%C5%84ski-Park-Narodowy.jpg);
-	background-size:cover;
 }
+
+.btn-group:nth-of-type(2) .button:nth-of-type(1) {
+	background-image: url(https://www.symbole.pl/wp-content/uploads/2020/06/Bieszczadzki-Park-Narodowy.jpg);
+}
+
+.btn-group:nth-of-type(2) .button:nth-of-type(2) {
+	background-image: url(https://www.symbole.pl/wp-content/uploads/2020/06/Park-Narodowy-%E2%80%9EBory-Tucholskie%E2%80%9D.jpg);
+}
+
+.btn-group:nth-of-type(2) .button:nth-of-type(3) {
+	background-image: url(https://www.symbole.pl/wp-content/uploads/2020/06/Drawie%C5%84ski-Park-Narodowy-1-e1593439908901.jpg);
+}
+
+.btn-group:nth-of-type(3) .button:nth-of-type(1) {
+	background-image: url(https://www.symbole.pl/wp-content/uploads/2020/06/Gorcza%C5%84ski-Park-Narodowy.jpg);
+}
+
+.btn-group:nth-of-type(3) .button:nth-of-type(2) {
+	background-image: url(https://www.symbole.pl/wp-content/uploads/2020/06/Park-Narodowy-G%C3%B3r-Sto%C5%82owych.jpg);
+}
+
+.btn-group:nth-of-type(3) .button:nth-of-type(3) {
+	background-image: url(https://www.symbole.pl/wp-content/uploads/2020/10/Kampinoski_okragle_podstawowe.png);
+	padding: 0px;
+}
+
+.btn-group:nth-of-type(4) .button:nth-of-type(1) {
+	background-image: url(https://www.symbole.pl/wp-content/uploads/2020/06/Karkonoski-Park-Narodowy.png);
+}
+
+.btn-group:nth-of-type(4) .button:nth-of-type(2) {
+	background-image: url(https://www.symbole.pl/wp-content/uploads/2020/06/Magurski-Park-Narodowy.jpg);
+}
+
+.btn-group:nth-of-type(4) .button:nth-of-type(3) {
+	background-image: url(https://www.symbole.pl/wp-content/uploads/2020/06/Narwia%C5%84ski-Park-Narodowy.jpg);
+}
+
+.btn-group:nth-of-type(5) .button:nth-of-type(1) {
+	background-image: url(https://www.symbole.pl/wp-content/uploads/2020/06/Ojcowski-Park-Narodowy.jpg);
+}
+
+.btn-group:nth-of-type(5) .button:nth-of-type(2) {
+	background-image: url(https://www.symbole.pl/wp-content/uploads/2020/06/Pieni%C5%84ski-Park-Narodowy.jpg);
+}
+
+.btn-group:nth-of-type(5) .button:nth-of-type(3) {
+	background-image: url(https://www.symbole.pl/wp-content/uploads/2020/06/Poleski-Park-Narodowy.jpg);
+}
+
+.btn-group:nth-of-type(6) .button:nth-of-type(1) {
+	background-image: url(https://www.symbole.pl/wp-content/uploads/2020/06/Roztocza%C5%84ski-Park-Narodowy.jpg);
+}
+
+.btn-group:nth-of-type(6) .button:nth-of-type(2) {
+	background-image: url(https://www.symbole.pl/wp-content/uploads/2020/06/S%C5%82owi%C5%84ski-Park-Narodowy.jpg);
+}
+
+.btn-group:nth-of-type(6) .button:nth-of-type(3) {
+	background-image: url(https://www.symbole.pl/wp-content/uploads/2020/06/%C5%9Awi%C4%99tokrzyski-Park-Narodowy.jpg);
+}
+
+.btn-group:nth-of-type(7) .button:nth-of-type(1) {
+	background-image: url(https://www.symbole.pl/wp-content/uploads/2020/06/Tatrza%C5%84ski-Park-Narodowy.jpg);
+}
+
+.btn-group:nth-of-type(7) .button:nth-of-type(2) {
+	background-image: url(https://www.symbole.pl/wp-content/uploads/2020/06/Park-Narodowy-%E2%80%9EUj%C5%9Bcie-Warty%E2%80%9D.jpg);
+}
+
+.btn-group:nth-of-type(7) .button:nth-of-type(3) {
+	background-image: url(https://www.symbole.pl/wp-content/uploads/2020/06/Wielkopolski-Park-Narodowy.jpg);
+}
+
+.btn-group:nth-of-type(8) .button:nth-of-type(1) {
+	background-image: url(https://www.symbole.pl/wp-content/uploads/2020/06/Wigierski-Park-Narodowy.jpg);
+}
+
+.btn-group:nth-of-type(8) .button:nth-of-type(2) {
+	background-image: url(https://www.symbole.pl/wp-content/uploads/2020/06/Woli%C5%84ski-Park-Narodowy.jpg);
+}
+
+
 
 
