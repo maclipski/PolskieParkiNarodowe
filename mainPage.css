@@ -1,0 +1,67 @@
+ul {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.main {
+  padding: 16px;
+  margin-top: 30px;
+}
+
+.btn-group .button {
+	width: 33%;
+	aspect-ratio: 1/1;
+	background-color: #4CAF50;  /*Green */
+	border: none;
+	color: white;
+	padding: 32px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    float: left;
+}
+
+.btn-group .button:hover {
+	background-color: #3e8e41;
+}
+
+.btn-group:nth-of-type(1) .button:nth-of-type(1) {
+	background-image: url(https://www.symbole.pl/wp-content/uploads/2020/06/Babiog%C3%B3rski-Park-Narodowy.jpg);
+	background-size:cover;
+}
+
+.btn-group:nth-of-type(1) .button:nth-of-type(2) {
+	background-image: url(https://www.symbole.pl/wp-content/uploads/2020/06/Bia%C5%82owieski-Park-Narodowy.jpg);
+	background-size:cover;
+}
+
+.btn-group:nth-of-type(1) .button:nth-of-type(3) {
+	background-image: url(https://www.symbole.pl/wp-content/uploads/2020/06/Biebrza%C5%84ski-Park-Narodowy.jpg);
+	background-size:cover;
+}
+
+
