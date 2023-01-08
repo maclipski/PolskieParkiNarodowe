@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="park.css">
+	<link rel = "stylesheet" href = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+	<title>Biebrzański Park Narodowy</title>
+</head>
+<body>
+
+<div class="navbar">
+	<ul>
+		<li><a href="mainPage.html">Parki narodowe</a></li>
+		<li><a href="humor.html">Humor</a></li>
+		<li><a href="#contact">Kontakt</a></li>
+	</ul>
+</div>
+
+<div class="main">
+
+	<div class="row">
+	  <div class="leftcolumn">
+		<div class="card">
+		  <h2>Biebrzański Park Narodowy</h2>
+		  <h5>Osowiec-Twierdza 8, 19-110 (53.473460099369, 22.65743263068811)</h5>
+		   <div id = "map" style = "width: 100%; height: 580px"></div>
+				<script src = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+				<script>
+				 // Creating map options
+				 var mapOptions = {
+					center: [53.473460099369, 22.65743263068811], 
+					zoom: 12,
+					zoomControl: false
+				 }
+				 
+				 // Creating a map object
+				 var map = new L.map('map', mapOptions);
+				 
+				 L.control.zoom({
+				 position: 'bottomright'
+				 }).addTo(map);
+				 
+				 // Creating a Layer object
+				 var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+				 
+				 // Adding layer to the map
+				 map.addLayer(layer);
+				</script>
+		  <p>Biebrzański Park Narodowy (BbPN) został utworzony na podstawie Rozporządzenia Rady Ministrów z dnia 9 września 1993 roku jako 18-ty z kolei polski park narodowy. Obecnie, spośród 23 polskich parków narodowych BbPN jest największym parkiem narodowym i jednym z większych w Europie. Celem Parku jest ochrona rozległych torfowisk Kotliny Biebrzańskiej oraz niewielkiego fragmentu Wzgórz Sokólskich o łącznej powierzchni 59.223 ha. Otulina Parku obejmuje także nieduże części przylegających do Kotliny Biebrzańskiej mezoregionów: Wzgórz Sokólskich, Wysoczyzny Białostockiej, Wysoczyzny Kolneńskiej i Doliny Górnej Narwi. W granicach Parku znajduje się osiem wyłączonych z niego enklaw, obejmujących głównie wyspy mineralne w obrębie Kotliny Biebrzańskiej, zajęte pod uprawy, łąki i osadnictwo 7 wsi. Jedna enklawa to Las Wroceński.</p>
+		  <p>Najcenniejsze walory Parku to szeroka dolina mającej charakter naturalny silnie meandrującej rzeki Biebrzy, z największym zespołem torfowisk w Polsce, zwanych Bagnami Biebrzańskimi. Wraz z unikatową mozaiką i strefowością siedlisk mokradłowych, a także ekstensywnym rolnictwem zachowały się tu rzadkie, zagrożone i ginące w kraju i Europie gatunki roślin, ptaków i innych zwierząt. Charakterystyczne dla Biebrzańskiego Parku Narodowego są również rozległe krajobrazy, ekosystemy i siedliska, które gdzie indziej zostały już bezpowrotnie zniszczone, w wyniku melioracji, osuszania bagien i torfowisk. </p>
+		  <p>Bagna Biebrzańskie są uznawane za jedną z najważniejszych w kraju i w Europie Środkowej ostoi ptaków wodno-błotnych. Jako niezwykle cenny obszar wodno-błotny Biebrzański Park Narodowy w roku 1995 został wpisany na listę Konwencji Ramsar o obszarach wodno-błotnych mających znaczenie międzynarodowe, zwłaszcza jako środowisko życiowe ptactwa wodnego. O międzynarodowej randze walorów przyrodniczych doliny Biebrzy świadczy również uznanie jej za ostoję ptaków o randze europejskiej, wg klasyfikacji BirdLife International. W 2004 dolinę Biebrzy włączono do sieci Natura 2000. Obecnie jest to Obszar Specjalnej Ochrony Ptaków (PLB 200006 Ostoja Biebrzańska o powierzchni 148 509,33 ha) i Specjalny Obszar Ochrony Siedlisk  (PLH 200008 Dolina Biebrzy o powierzchni 121 206,23 ha) . </p>
+		</div>
+	  </div>
+	</div>
+
+</div>
+</body>
+</html>
+
+
