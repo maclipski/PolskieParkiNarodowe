@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="park.css">
+	<link rel = "stylesheet" href = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+	<title>Tatrzański Park Narodowy</title>
+</head>
+<body>
+
+<div class="navbar">
+	<ul>
+		<li><a href="mainPage.html">Parki narodowe</a></li>
+		<li><a href="humor.html">Humor</a></li>
+		<li><a href="#contact">Kontakt</a></li>
+	</ul>
+</div>
+
+<div class="main">
+
+	<div class="row">
+	  <div class="leftcolumn">
+		<div class="card">
+		  <h2>Tatrzański Park Narodowy</h2>
+		  <h5>Kuźnice 1, 34-500 Zakopane (49.27138615919193, 19.981814851481197)</h5>
+		   <div id = "map" style = "width: 100%; height: 580px"></div>
+				<script src = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+				<script>
+				 // Creating map options
+				 var mapOptions = {
+					center: [49.27138615919193, 19.981814851481197], 
+					zoom: 12,
+					zoomControl: false
+				 }
+				 
+				 // Creating a map object
+				 var map = new L.map('map', mapOptions);
+				 
+				 L.control.zoom({
+				 position: 'bottomright'
+				 }).addTo(map);
+				 
+				 // Creating a Layer object
+				 var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+				 
+				 // Adding layer to the map
+				 map.addLayer(layer);
+				</script>
+			<p>Tatry to jedyny w Polsce obszar o charakterze wysokogórskim. Był on zatem zawsze trudniej dostępny, a trudne warunki życia powodowały, że przez wiele wieków teren ten nie był zagospodarowany przez człowieka. Dawało to możliwość swobodnego działania sił przyrody i uchroniło Tatry przed większymi przekształceniami. W zasadzie bez wpływu na stan przyrody pozostała działalność człowieka w średniowieczu. Wędrowne pasterstwo wołoskie (od XIII wieku) czy też ekspedycje poszukiwaczy skarbów nie odcisnęły na przyrodzie Tatr trwałego piętna. Dopiero działalność przemysłowa (górnictwo i hutnictwo) dokonała istotnych zmian w przyrodzie i to zwłaszcza w XVIII i XIX wieku.</p>
+			<p>Wybitne nie tylko w skali kraju i ciągle jeszcze dobrze zachowane walory przyrodnicze Tatr zostały "odkryte" na przełomie wieków XVIII i XIX przez uczonych, którzy dotarli w Tatry. Ich prace wydobyły na światło dzienne bogactwo przyrody i jej specyficzny, niepowtarzalny charakter. Bardzo szybko też okazało się, że walory te są coraz bardziej zagrożone i że istnieje potrzeba ich ochrony. Stąd w latach 80. XIX wieku pojawiły się pierwsze koncepcje objęcia Tatr ochroną w formie parku narodowego na wzór pierwszego w świecie amerykańskiego parku narodowego w Yellowstone. Z różnych jednak powodów (własnościowych, finansowych) idea parku narodowego nie mogła być przez dziesięciolecia zrealizowana. Ostatecznie Tatrzański Park Narodowy został utworzony na mocy rozporządzenia Rady Ministrów z dnia 30 października 1954 roku i rozpoczął działalność z dniem 1 stycznia 1955 roku.</p>
+		    <p>Powierzchnia parku wynosi 21197 ha i pod tym względem zaliczany jest do jednych z większych parków narodowych w Polsce.</p>
+		    <p>Około 70 proc. powierzchni parku zajmują lasy i zarośla kosodrzewiny, a pozostałe 30 proc. to murawy wysokogórskie, skały i wody. Ochroną ścisłą objęte jest prawie 11,5 tys. ha powierzchni, w tym całe piętro hal i turni, piętro kosodrzewiny oraz częściowo również lasy regla górnego i dolnego. Ochrona ścisła polega na ochronie procesów zachodzących w środowisku naturalnym.</p>
+		  </div>
+	  </div>
+	</div>
+
+</div>
+</body>
+</html>
+
+
