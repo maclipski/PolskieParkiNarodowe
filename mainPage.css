@@ -30,6 +30,17 @@ li a:hover {
   background-color: #111;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+/* Add a gray background color with some padding */
+body {
+  font-family: Arial;
+  padding: 20px;
+  background: #f1f1f1;
+}
+
 .main {
   padding: 16px;
   margin-top: 30px;
