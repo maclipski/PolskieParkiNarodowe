@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="park.css">
+	<link rel = "stylesheet" href = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+	<title>Ojcowski Park Narodowy</title>
+</head>
+<body>
+
+<div class="navbar">
+	<ul>
+		<li><a href="mainPage.html">Parki narodowe</a></li>
+		<li><a href="humor.html">Humor</a></li>
+		<li><a href="contact.html">Kontakt</a></li>
+	</ul>
+</div>
+
+<div class="main">
+
+	<div class="row">
+	  <div class="leftcolumn">
+		<div class="card">
+		  <h2>Ojcowski Park Narodowy</h2>
+		  <h5>Ojców 9, 32-045 Sułoszowa(50.206474800655364, 19.8196357291063)</h5>
+		   <div id = "map" style = "width: 100%; height: 580px"></div>
+				<script src = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+				<script>
+				 // Creating map options
+				 var mapOptions = {
+					center: [50.206474800655364, 19.8196357291063], 
+					zoom: 12,
+					zoomControl: false
+				 }
+				 
+				 // Creating a map object
+				 var map = new L.map('map', mapOptions);
+				 
+				 L.control.zoom({
+				 position: 'bottomright'
+				 }).addTo(map);
+				 
+				 // Creating a Layer object
+				 var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+				 
+				 // Adding layer to the map
+				 map.addLayer(layer);
+				</script>
+			<p>Starania o ochronę przyrody Doliny Prądnika sięgają pocz. XIX w. i wiążą się z pierwszymi badaniami prowadzonymi na tym terenie. Odkryto tu wówczas wiele interesujących gatunków roślin i zwierząt oraz dokonano naukowej eksploracji jaskiń. Oprócz tego ojcowski krajobraz stał się tematem reportaży i wspomnień oraz natchnieniem dla wielu artystów i poetów. Piękno Doliny Prądnika, bogata flora i fauna, interesująca przeszłość archeologiczna skłaniały licznych przybyszów do objęcia ochroną tego zakątka ówczesnego Królestwa Kongresowego, nazywanego nawet "Polską Szwajcarią".</p>
+			<p>Na łamach prasy pojawiły się głosy protestu przeciwko eksploatacji lasów, m.in. piętnujące barbarzyńskie poczynania wrocławskich kupców niszczących ojcowskie lasy, którzy nie bacząc na warunki postawione w kontrakcie sprzedaży wycięli drzewostan pokrywający wierzchowinę jurajską w rejonie Smardzowic, Woli Kalinowskiej i Sąspowa.</p>
+			<p>Ówczesne prawodawstwo zupełnie pomijało zagadnienia ochrony przyrody. Bezkarnie rozkopywano namuliska jaskiń, wydobywając z nich cenny materiał nawozowy. Najwięcej strat poniosły jaskinie Koziarnia i Nietoperzowa, w których eksploatację namulisk prowadził w l. 1877-78 górnośląski urząd górniczy pod kierunkiem O. Grubego. W pozostałych jaskiniach, ogólnie dostępnych do zwiedzania odłamywano nacieki, przeciwko czemu protestowano w opisach Ojcowa i w artykułach prasowych.</p>
+			<p>Duże zasługi w ochronie przyrody Ojcowa położył także były jego właściciel Jan Zawisza, archeolog-amator, pierwszy badacz tutejszych jaskiń, który rozpoczął stopniowe wykupywanie Doliny Prądnika i okolic z rąk wrocławskich kupców. Dalsze wykupy kontynuował kolejny właściciel Ojcowa - Ludwik Krasiński.</p>
+		  </div>
+	  </div>
+	</div>
+
+</div>
+</body>
+</html>
+
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="park.css">
+	<link rel = "stylesheet" href = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+	<title>Woliński Park Narodowy</title>
+</head>
+<body>
+
+<div class="navbar">
+	<ul>
+		<li><a href="mainPage.html">Parki narodowe</a></li>
+		<li><a href="humor.html">Humor</a></li>
+		<li><a href="contact.html">Kontakt</a></li>
+	</ul>
+</div>
+
+<div class="main">
+
+	<div class="row">
+	  <div class="leftcolumn">
+		<div class="card">
+		  <h2>Woliński Park Narodowy</h2>
+		  <h5>Grodno 1, 72-500 Międzyzdroje (53.89703816565908, 14.489027458739864)</h5>
+		   <div id = "map" style = "width: 100%; height: 580px"></div>
+				<script src = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+				<script>
+				 // Creating map options
+				 var mapOptions = {
+					center: [53.89703816565908, 14.489027458739864], 
+					zoom: 12,
+					zoomControl: false
+				 }
+				 
+				 // Creating a map object
+				 var map = new L.map('map', mapOptions);
+				 
+				 L.control.zoom({
+				 position: 'bottomright'
+				 }).addTo(map);
+				 
+				 // Creating a Layer object
+				 var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+				 
+				 // Adding layer to the map
+				 map.addLayer(layer);
+				</script>
+			<p>Woliński Park Narodowy utworzony w 1960 roku obejmuje ochroną część największej polskiej wyspy – Wolin (woj. zachodniopomorskie). Szczególne walory Parku to: najpiękniejszy odcinek polskiego wybrzeża klifowego, dobrze zachowane lasy bukowe, unikalna – wyspiarska delta Świny, przybrzeżny pas wód Bałtyku. Do roku 1996 Park zajmował powierzchnię 4691 ha, kiedy to udało się włączyć w jego granice obszar 1 mili morskiej wód przybrzeżnych Bałtyku, archipelag wysp we wstecznej delcie Świny wraz z otaczającymi je wodami Zalewu Szczecińskiego. Od tego momentu Woliński Park Narodowy stał się pierwszym w Polsce parkiem morskim. Obecna powierzchnia Parku wynosi 10937 ha, w tym ekosystemy leśne zajmują 4648,53 ha (42,50 % powierzchni Parku), ekosystemy wodne 4681,41 ha (42,80%) i ekosystemy lądowe nieleśne 1607,46 ha ( 14,70 %). Ochroną ścisłą objęto obszary o łącznej powierzchni 498,72 ha ( 4,56 %).</p>
+			<p>Obszar lądowy Parku jest silnie zróżnicowany. Wyspa Wolin generalnie ukształtowana przez ostatni lodowiec wciąż zmienia się. Współczesny obraz wyspy kształtował się około 10-11000 lat. Pierwotnie utwory lodowcowe modelowane były przez wiatry i wody, zalewane tereny stopniowo zamieniały się w bagna i torfowiska. Stale działały wody Bałtyku i Odry tworząc m.in. wydmowe mierzeje jak również klify.</p>
+			<p>Dominującym krajobrazem jest pasmo wzniesień moreny czołowej graniczące na odcinku ok.15 km z morzem. Najwyższe aktywne klify osiągają wysokość 93m. Abrazja klifowego wybrzeża corocznie przesuwa linię brzegu o około 80 cm. Wzgórza morenowe, które zajmują przeważającą część powierzchni lądowej parku najwyższą wysokość – 115 m n.p.m., osiągają w kulminacji Grzywacza. Drugim, pod względem zajmowanego obszaru jest krajobraz delty Świny z kilkudziesięcioma bagnistymi wysepkami, które rozdzielone są licznymi cieśninami. Na tym terenie proces jego formowania jest również stale aktywny – corocznie zmienia się konfiguracja dna, powstają n owe płycizny, wysepki. Trzecim typem krajobrazu jest pojezierze z polodowcowymi jeziorami, ozami i kemami (okolice Warnowa). Niewielką część Parku zajmuje rozległy obszar sandru (Wapnica-Karnocice).</p>
+		 </div>
+	  </div>
+	</div>
+
+</div>
+</body>
+</html>
+
+

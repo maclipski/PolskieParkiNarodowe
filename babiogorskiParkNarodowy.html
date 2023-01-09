@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="park.css">
+	<link rel = "stylesheet" href = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+	<title>Babiogórski Park Narodowy</title>
+</head>
+<body>
+
+<div class="navbar">
+	<ul>
+		<li><a href="mainPage.html">Parki narodowe</a></li>
+		<li><a href="humor.html">Humor</a></li>
+		<li><a href="contact.html">Kontakt</a></li>
+	</ul>
+</div>
+
+<div class="main">
+
+	<div class="row">
+	  <div class="leftcolumn">
+		<div class="card">
+		  <h2>Babiogórski Park Narodowy</h2>
+		  <h5>34-222 Zawoja 1403 (49.59368666425354, 19.533856751331474)</h5>
+		   <div id = "map" style = "width: 100%; height: 580px"></div>
+				<script src = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+				<script>
+				 // Creating map options
+				 var mapOptions = {
+					center: [49.59368666425354, 19.533856751331474], 
+					zoom: 12,
+					zoomControl: false
+				 }
+				 
+				 // Creating a map object
+				 var map = new L.map('map', mapOptions);
+				 
+				 L.control.zoom({
+				 position: 'bottomright'
+				 }).addTo(map);
+				 
+				 // Creating a Layer object
+				 var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+				 
+				 // Adding layer to the map
+				 map.addLayer(layer);
+				</script>
+			<p>Babia Góra stanowi najwyższe wzniesienie Beskidów Zachodnich. Jest jednolitym i odosobnionym masywem o przebiegu równoleżnikowym. Charakterystyczna, z daleka już rozpoznawalna sylweta góry ze stromymi stokami północnymi i połogami, na dużych obszarach wypłaszczonymi stokami południowymi, jest wynikiem budowy geologicznej masywu.</p>
+			<p>Wysokość - 1725 m n.p.m. - sytuująca ją na drugim po Tatrach miejscu w Polsce, powoduje zróżnicowanie warunków klimatycznych, co przekłada się z kolei na warunki siedliskowe. Zmieniają się one wyraźnie w miarę wzrostu wysokości n.p.m. powodując pionowe zróżnicowanie szaty roślinnej. Pozwala to na wyróżnienie na Babiej Górze pięter klimatyczno-roślinnych odpowiadającym analogicznym piętrom występującym w górach wysokich np. Tatrach, Alpach, lecz w stosunku do nich obniżonych o kilkaset metrów.</p>
+			<p>Obszar Babiej Góry jest miejscem występowania wielu rzadkich i interesujących gatunków roślin i zwierząt. Spotkać można tutaj rośliny, których trudno jest szukać w innych miejscach Polski, rzadkie i zagrożone wyginięciem, jak również wiele gatunków objętych ochroną prawną. Świat zwierząt jest równie bogaty i zróżnicowany. Babia Góra jest ostoją dla wielu gatunków, które z powodu silnej presji człowieka z trudem znajdują sobie miejsce poza obszarami chronionymi.</p>
+		  </div>
+	  </div>
+	</div>
+
+</div>
+</body>
+</html>
+
+

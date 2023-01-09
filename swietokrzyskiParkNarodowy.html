@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="park.css">
+	<link rel = "stylesheet" href = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+	<title>Świętokrzyski Park Narodowy</title>
+</head>
+<body>
+
+<div class="navbar">
+	<ul>
+		<li><a href="mainPage.html">Parki narodowe</a></li>
+		<li><a href="humor.html">Humor</a></li>
+		<li><a href="contact.html">Kontakt</a></li>
+	</ul>
+</div>
+
+<div class="main">
+
+	<div class="row">
+	  <div class="leftcolumn">
+		<div class="card">
+		  <h2>Świętokrzyski Park Narodowy</h2>
+		  <h5>Suchedniowska 4, 26-010 Bodzentyn (50.8978685861024, 20.91339028571032)</h5>
+		   <div id = "map" style = "width: 100%; height: 580px"></div>
+				<script src = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+				<script>
+				 // Creating map options
+				 var mapOptions = {
+					center: [50.8978685861024, 20.91339028571032], 
+					zoom: 12,
+					zoomControl: false
+				 }
+				 
+				 // Creating a map object
+				 var map = new L.map('map', mapOptions);
+				 
+				 L.control.zoom({
+				 position: 'bottomright'
+				 }).addTo(map);
+				 
+				 // Creating a Layer object
+				 var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+				 
+				 // Adding layer to the map
+				 map.addLayer(layer);
+				</script>
+		    <p>Góry Świętokrzyskie są najstarszymi w Polsce. Wypiętrzone w trzech różnych okresach górotwórczych, rozłożyły się na Wyżynie Małopolskiej, pomiędzy Pilicą a Wisłą. Ich zarysy są łagodne, a wysokości niewielkie. Fascynują natomiast niezwykle oryginalną budową, urozmaiconą roślinnością i światem zwierzęcym.</p>
+			<p>Toteż już na początku XX wieku narodziła się idea objęcia ochroną terenu Łysogór. W 1908 roku Polskie Towarzystwo Krajoznawcze – Komisja Ochrony Zabytków Przyrody zgłosiła postulat utworzenia tu rezerwatu przyrody. Rozpoczął się prawie pół wieku trwający okres starań społecznych o utworzenie na tym obszarze parku narodowego.</p>
+			<p>W 1920 r. powstał pierwszy w Górach Świętokrzyskich rezerwat ścisły na Chełmowej Górze. Objął kompleks lasu z naturalnym stanowiskiem modrzewia polskiego. W 1924 r. utworzono dwa kolejne rezerwaty: rezerwat na Łysej Górze i Łysicy. W 1932 r. częściową ochroną objęto tereny przylegające do istniejących rezerwatów. Poza tym utworzono rezerwat częściowy na Miejskiej Górze. Łączny obszar rezerwatów wynosił wówczas 1347,4 ha i stanowił trzon przyszłego Parku.</p>
+		  </div>
+	  </div>
+	</div>
+	
+</div>
+</body>
+</html>
+
+

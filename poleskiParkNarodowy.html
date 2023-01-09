@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="park.css">
+	<link rel = "stylesheet" href = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+	<title>Poleski Park Narodowy</title>
+</head>
+<body>
+
+<div class="navbar">
+	<ul>
+		<li><a href="mainPage.html">Parki narodowe</a></li>
+		<li><a href="humor.html">Humor</a></li>
+		<li><a href="contact.html">Kontakt</a></li>
+	</ul>
+</div>
+
+<div class="main">
+
+	<div class="row">
+	  <div class="leftcolumn">
+		<div class="card">
+		  <h2>Poleski Park Narodowy</h2>
+		  <h5>ul. Lubelska 3a, 22-234 Urszulin  (51.431627400038586, 23.116103048668528)</h5>
+		   <div id = "map" style = "width: 100%; height: 580px"></div>
+				<script src = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+				<script>
+				 // Creating map options
+				 var mapOptions = {
+					center: [51.431627400038586, 23.116103048668528], 
+					zoom: 12,
+					zoomControl: false
+				 }
+				 
+				 // Creating a map object
+				 var map = new L.map('map', mapOptions);
+				 
+				 L.control.zoom({
+				 position: 'bottomright'
+				 }).addTo(map);
+				 
+				 // Creating a Layer object
+				 var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+				 
+				 // Adding layer to the map
+				 map.addLayer(layer);
+				</script>
+			<p>Piękno i wartość przyrody Polesia doceniano już na początku XX wieku, idee utworzenia tutaj parku narodowego rodziły się w okresie międzywojennym. Po raz pierwszy koncepcję utworzenia parku narodowego na Polesiu zgłosił w 1933 r. prof. Władysław Szafer. Plany dotyczyły części Polesia znajdującej się dzisiaj na terenie Białorusi. Kolejną propozycję przedstawił prof. Tadeusz Wilgat w roku 1954. Jednak na szczególne wyróżnienie zasługuje prof. Dominik Fijałkowski, który zaproponował utworzenie parku narodowego właśnie tutaj, gdzie funkcjonuje on obecnie. Był to wówczas pierwszy w kraju projekt parku narodowego o charakterze wodno-torfowiskowym, o pow. ok. 3000 ha. Początkowo nazwany został Wytyckim Parkiem Narodowym. Od tego czasu koncepcje granic przyszłego parku ulegały zmianom.</p>
+			<p>Na obszarze Polesia prowadzono przez lata intensywne prace melioracyjne, związane z budową Kanału Wieprz-Krzna. W latach 70-tych na Pojezierzu Łęczyńsko-Włodawskim rozpoczęto eksploatację węgla kamiennego (Lubelskie Zagłębie Węglowe). Nie było więc sprzyjających warunków do tworzenia parku narodowego. Ochroniarze czynili jednak starania, by zachować chociaż najcenniejsze obiekty przyrodnicze. Z inicjatywy prof. Fijałkowskiego powstały w tym rejonie 4 rezerwaty przyrody: w 1966 r. "Durne Bagno" o pow. 213,2 ha, w 1974 r. "Jezioro Moszne" o pow. 205,12 ha, w 1978 r. "Jezioro Długie" o pow. 694,93 ha i w 1982 r.  "Torfowisko Orłowskie" o pow. 671,73 ha. Łączna ich powierzchnia wynosiła 1784,98 ha. Niestety nie udało się uratować przed melioracją, osuszeniem i zamienieniem na użytki zielone rozległego kompleksu Krowiego Bagna.  W 1983 r., jako pierwsze w kraju, woj. chełmskie wprowadziło Ekologiczny System Obszarów Chronionych. Powstały wtedy 4 parki krajobrazowe: Poleski, Sobiborski, Strzelecki i Chełmski oraz 4 obszary chronionego krajobrazu (Poleski, Chełmski, Pawłowski i Grabowiecko - Strzelecki).</p>
+			<p>Dokumentację naukową stanowiącą podstawę do utworzenia Poleskiego Parku Narodowego opracował zespół pod kierunkiem dr hab. Tadeusza J. Chmielewskiego w 1989r. Starania naukowców zostały uwieńczone sukcesem 1 maja 1990 roku, kiedy to na powierzchni 4813 ha powstał Poleski Park Narodowy. Był to pierwszy w Polsce park narodowy o charakterze wodno - torfowiskowym. Jako park o charakterze wodno-torfowiskowym borykał się z problemami, jakich nie miały inne parki. Podstawowym warunkiem zachowania jego walorów przyrodniczych było utrzymanie odpowiednich stosunków wodnych, zarówno ilościowych, jak i jakościowych. Problem ten trudno było rozwiązać w pierwotnych granicach. Park obejmował tylko część zlewni rzek Piwonii i Włodawki, co uniemożliwiało kontrolę stanu stosunków wodnych. Biorąc to pod uwagę pracownicy Parku już w 1991 r. opracowali koncepcję jego powiększenia. W projekcie powiększenia wzięto pod uwagę powstały w 1991r.  rezerwatu torfowiskowego "Bagno Bubnów" o pow. 1600 ha. W marcu 1991 r. projekt zaakceptowała Rada Naukowa Parku. Następnie projekt w formie wniosku został skierowany do Ministra Ochrony Środowiska Zasobów Naturalnych i Leśnictwa.</p>
+		 </div>
+	  </div>
+	</div>
+
+</div>
+</body>
+</html>
+
+

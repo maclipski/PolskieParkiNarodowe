@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="park.css">
+	<link rel = "stylesheet" href = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+	<title>Wigierski Park Narodowy</title>
+</head>
+<body>
+
+<div class="navbar">
+	<ul>
+		<li><a href="mainPage.html">Parki narodowe</a></li>
+		<li><a href="humor.html">Humor</a></li>
+		<li><a href="contact.html">Kontakt</a></li>
+	</ul>
+</div>
+
+<div class="main">
+
+	<div class="row">
+	  <div class="leftcolumn">
+		<div class="card">
+		  <h2>Wigierski Park Narodowy</h2>
+		  <h5>Krzywe 82, 16-402 Suwałki (54.08153785344302, 23.02223683443221)</h5>
+		   <div id = "map" style = "width: 100%; height: 580px"></div>
+				<script src = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+				<script>
+				 // Creating map options
+				 var mapOptions = {
+					center: [54.08153785344302, 23.02223683443221], 
+					zoom: 12,
+					zoomControl: false
+				 }
+				 
+				 // Creating a map object
+				 var map = new L.map('map', mapOptions);
+				 
+				 L.control.zoom({
+				 position: 'bottomright'
+				 }).addTo(map);
+				 
+				 // Creating a Layer object
+				 var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+				 
+				 // Adding layer to the map
+				 map.addLayer(layer);
+				</script>
+			<p>Wigierski Park Narodowy wyróżnia niezwykłe bogactwo jezior otoczonych rozległymi lasami. Oprócz największego i słynnego ze swej malowniczości jeziora Wigry, w parku znajduje się jeszcze 41 naturalnych zbiorników wodnych. Osobliwością są suchary – śródleśne, niewielkie jeziorka dystroficzne (z kwaśną wodą bogatą w substancje humusowe), otoczone pływającym kożuchem składającym się głównie z mchów torfowców. Przez WPN przepływa Czarna Hańcza, dopływ Niemna. W północnej części parku płyną rzeki o bystrym nurcie: Kamionka, Wiatrołuża i Maniówka. Można śmiało stwierdzić, że nie ma w Polsce drugiego parku narodowego z tak dobrze wykształconym i urozmaiconym krajobrazem pojeziernym najmłodszego zlodowacenia. Ten leśno-jeziorny krajobraz uzupełniają otwarte tereny wsi, pól i łąk, z urozmaiconą polodowcową rzeźbą terenu. W wielu miejscach otwiera się widok na pokamedulski zespół klasztorny majestatycznie wznoszący się na wigierskim półwyspie.</p>
+			<p>Wigierski Park Narodowy jest położony w północno-wschodniej części Polski, na wschód od miasta Suwałki, w centrum regionu zwanego Suwalszczyzną.</p>
+			<p>Wyjątkowa różnorodność ekosystemów wodnych, leśnych, torfowiskowych oraz użytków rolnych decyduje o dużym zróżnicowaniu gatunkowym występujących tu roślin, grzybów i zwierząt. Ze względu na obecność wielu siedlisk przyrodniczych i gatunków coraz rzadszych w skali kontynentu, teren parku został włączony do europejskiej sieci obszarów chronionych Natura 2000.</p>
+		  </div>
+	  </div>
+	</div>
+
+</div>
+</body>
+</html>
+
+
