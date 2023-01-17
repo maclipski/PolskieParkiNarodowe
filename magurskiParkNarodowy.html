@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="park.css">
+	<link rel = "stylesheet" href = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+	<title>Magurski Park Narodowy</title>
+</head>
+<body>
+
+<div class="navbar">
+	<ul>
+		<li><a href="mainPage.html">Parki narodowe</a></li>
+		<li><a href="humor.html">Humor</a></li>
+		<li><a href="contact.html">Kontakt</a></li>
+	</ul>
+</div>
+
+<div class="main">
+
+	<div class="row">
+	  <div class="leftcolumn">
+		<div class="card">
+		  <h2>Magurski Park Narodowy</h2>
+		  <h5>ul. Krempna 59, 38 – 232 Krempna, woj. podkarpackie (49.511954556356855, 21.497550514850563)</h5>
+		   <div id = "map" style = "width: 100%; height: 580px"></div>
+				<script src = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+				<script>
+				 // Creating map options
+				 var mapOptions = {
+					center: [49.511954556356855, 21.497550514850563], 
+					zoom: 12,
+					zoomControl: false
+				 }
+				 
+				 // Creating a map object
+				 var map = new L.map('map', mapOptions);
+				 
+				 L.control.zoom({
+				 position: 'bottomright'
+				 }).addTo(map);
+				 
+				 // Creating a Layer object
+				 var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+				 
+				 // Adding layer to the map
+				 map.addLayer(layer);
+				</script>
+			<p>Pierwsza koncepcja objęcia najwyższą formą ochrony reprezentatywnego fragmentu Beskidu Niskiego została wysunięta w programie ochrony krajobrazu Polski przez Komitet Ochrony Przyrody i Jej Zasobów PAN już w 1975 roku. Poparło ją również Polskie Towarzystwo Leśne, a autorzy koncepcji (Faliński J. B., Kozłowski S., Smólski S.) lokalizowali projektowany Park Narodowy o powierzchni ok. 13 000 ha w rejonie Magury Małastowskiej i Wątkowskiej. 
+			<p>Z kolei Komisja Ochrony Przyrody PTL w 1983 roku zaproponowała utworzenie parku narodowego o powierzchni ok. 18 000 ha obejmującego obszar Magury Wątkowskiej wraz z przylegającym masywem Mareszki.
+			<p>W 1987 roku Zakład Ochrony Przyrody i Zasobów Naturalnych PAN zaproponował utworzenie Magurskiego Parku Narodowego obejmującego swoim zasięgiem masyw Magury Wątkowskiej, pasmo Ostrej Góry i Dziamery oraz południową część Magury Małastowskiej.
+			<p>Oficjalne działania mające na celu utworzenie w Beskidzie Niskim parku narodowego rozpoczęło wystąpienie Wojewody Krośnieńskiego do Ministra Ochrony Środowiska, Zasobów Naturalnych i Leśnictwa pismem z dnia 30 lipca 1991 roku z wnioskiem o „wszczęcie procesu legislacyjnego nad powołaniem Magurskiego Parku Narodowego”. Szczegółowy projekt MPN opracowali prof. dr hab. S. Michalik i mgr inż. J. Szafrański, a powołanie parku do życia  poprzedzone było negocjacjami z władzami samorządowymi gmin, na terenie których tworzono Park oraz pracownikami likwidowanego Nadleśnictwa Żmigród.
+		</div>
+	  </div>
+	</div>
+
+</div>
+</body>
+</html>
+

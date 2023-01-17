@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="park.css">
+	<link rel = "stylesheet" href = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+	<title>Słowiński Park Narodowy</title>
+</head>
+<body>
+
+<div class="navbar">
+	<ul>
+		<li><a href="mainPage.html">Parki narodowe</a></li>
+		<li><a href="humor.html">Humor</a></li>
+		<li><a href="contact.html">Kontakt</a></li>
+	</ul>
+</div>
+
+<div class="main">
+
+	<div class="row">
+	  <div class="leftcolumn">
+		<div class="card">
+		  <h2>Słowiński Park Narodowy</h2>
+		  <h5>ul. Bohaterów Warszawy 1A, 76-214 Smołdzino (54.66292369152626, 17.215681457851964)</h5>
+		   <div id = "map" style = "width: 100%; height: 580px"></div>
+				<script src = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+				<script>
+				 // Creating map options
+				 var mapOptions = {
+					center: [54.66292369152626, 17.215681457851964], 
+					zoom: 12,
+					zoomControl: false
+				 }
+				 
+				 // Creating a map object
+				 var map = new L.map('map', mapOptions);
+				 
+				 L.control.zoom({
+				 position: 'bottomright'
+				 }).addTo(map);
+				 
+				 // Creating a Layer object
+				 var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+				 
+				 // Adding layer to the map
+				 map.addLayer(layer);
+				</script>
+			<p>Słowiński Park Narodowy jest jednym z 23 parków narodowych w Polsce i jednym z 2 parków nadmorskich. Został on utworzony dla zachowania w niezmienionym pięknie systemu jezior przymorskich, bagien, torfowisk, łąk, nadmorskich borów, i lasów, a przede wszystkim wydmowego pasa mierzei z unikatowymi w Europie wydmami ruchomymi. O randze i wartości przyrodniczej SPN świadczy fakt umieszczenia go w międzynarodowej sieci obszarów chronionych takich jak:
+				HELCOMBSPA, Światowy Rezerwat Przyrody czy obszar wodno-błotny Ramsar
+		</div>
+	  </div>
+	</div>
+
+</div>
+</body>

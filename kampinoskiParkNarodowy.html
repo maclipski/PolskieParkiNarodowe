@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="park.css">
+	<link rel = "stylesheet" href = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+	<title>Kampinoski Park Narodowy</title>
+</head>
+<body>
+
+<div class="navbar">
+	<ul>
+		<li><a href="mainPage.html">Parki narodowe</a></li>
+		<li><a href="humor.html">Humor</a></li>
+		<li><a href="contact.html">Kontakt</a></li>
+	</ul>
+</div>
+
+<div class="main">
+
+	<div class="row">
+	  <div class="leftcolumn">
+		<div class="card">
+		  <h2>Kampinoski Park Narodowy</h2>
+		  <h5>ul. Tetmajera 38, 05-080 Izabelin (52.31644075869402, 20.619777222246157)</h5>
+		   <div id = "map" style = "width: 100%; height: 580px"></div>
+				<script src = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+				<script>
+				 // Creating map options
+				 var mapOptions = {
+					center: [52.31644075869402, 20.619777222246157], 
+					zoom: 12,
+					zoomControl: false
+				 }
+				 
+				 // Creating a map object
+				 var map = new L.map('map', mapOptions);
+				 
+				 L.control.zoom({
+				 position: 'bottomright'
+				 }).addTo(map);
+				 
+				 // Creating a Layer object
+				 var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+				 
+				 // Adding layer to the map
+				 map.addLayer(layer);
+				</script>
+				<p>Kampinoski Park Narodowy obejmuje tereny Puszczy Kampinoskiej w pradolinie Wisły, w zachodniej części Kotliny Warszawskiej. W puszczy, która jest pozostałością po Puszczy Mazowieckiej, zaczęto karczowanie polan, uprawę ziemi i budowę osad w XVII w. Osady rozrastały się w miarę powiększania areału rolnego. W XX wieku sytuacja uległa zmianie. Od końca lat 70. ziemia jest wykupowana przez KPN i stopniowo zalesiana, a osadnictwo ograniczane. Na odtworzenie boru potrzeba 150 lat, by powstał najbardziej cenny drzewostan grądowy – 350 do 400 lat. Powierzchnia parku wynosi 38 544,33 ha, z czego 72,40 ha przypada na Ośrodek Hodowli Żubrów w Smardzewicach w województwie łódzkim[4]. Powierzchnia otuliny – 37 756 ha[4].
+				<p>Wydmy powstałe w pradolinie Wisły i obszary bagienne są najbardziej charakterystycznymi elementami tutejszego krajobrazu. Wydmy Parku uważane są za najlepiej zachowany kompleks wydm śródlądowych w skali Europy. Tak kontrastowe środowiska sprzyjają różnorodności świata roślin i zwierząt. Bagna porośnięte są roślinnością łąkową, turzycami, zaroślami i lasami bagiennymi, do których należą występujące w Parku lasy olsowe i łęgowe. Najczęściej spotykanym w Puszczy Kampinoskiej zespołem leśnym jest kontynentalny bór sosnowy świeży. Z dębów stanowiących tu ważną domieszkę – około 10% – występują trzy gatunki, dwa rodzime: dąb szypułkowy i dąb bezszypułkowy oraz pochodzący z Ameryki dąb czerwony.
+				<p>Park i dolina nieuregulowanej Wisły ze starorzeczami, piaszczystymi łachami, wyspami i zaroślami stanowią ważne miejsce bytowania wielu zwierząt. Wśród nich znajdują się gatunki przywrócone naturze: łoś – będący symbolem parku, bóbr oraz ryś.
+
+		</div>
+	  </div>
+	</div>
+
+</div>
+</body>
